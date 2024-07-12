@@ -23,7 +23,7 @@ const MusicButton = ({ isPlaying, setIsPlaying }) => {
         {isPlaying ? <HiSpeakerWave/> : <HiSpeakerXMark/>}
       </button>
       <audio ref={audioRef} loop>
-        <source src="background-music.webm" type="audio/webm" />
+        <source src="background-music.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
     </div>
