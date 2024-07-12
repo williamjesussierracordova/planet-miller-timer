@@ -1,0 +1,160 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+body {
+  font-family: "Space Mono",Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: transparent;
+  color: white;
+}
+.time-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: x-large;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#miller-time {
+  font-size: 1.5rem;
+  /* tiene que ser mas grueso la fuente */
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#earth-time {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theme-toggle, .music-button {
+  /* eliminar el borde blanco del boton al presionarlo */
+  outline: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.music-button-container {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+/* Tema claro */
+body.light-theme {
+  background-color: #f0f0f0;
+  color: #000000;
+  background-image: url('src/assets/desert-light.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Tema oscuro */
+body.dark-theme {
+  background-color: #000000;
+  color: #f0f0f0;
+  background-image: url('src/assets/space-dark.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 600px) {
+  .time-display {
+    flex-direction: column;
+  }
+
+  .time-unit {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .time-unit:last-child {
+    border-bottom: none;
+  }
+
+  .time-value, .time-label {
+    font-size: 1em;
+  }
+}
