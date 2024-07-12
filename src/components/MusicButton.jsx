@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import  { useRef, useEffect } from 'react';
 import { HiSpeakerWave } from "react-icons/hi2";
 import { HiSpeakerXMark } from "react-icons/hi2";
 
@@ -23,7 +23,7 @@ const MusicButton = ({ isPlaying, setIsPlaying }) => {
         {isPlaying ? <HiSpeakerWave/> : <HiSpeakerXMark/>}
       </button>
       <audio ref={audioRef} loop>
-        <source src="src\components\background-music.webm" type="audio/webm" />
+        <source src="public\background-music.webm" type="audio/webm" />
         Your browser does not support the audio element.
       </audio>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import Header from './components/Header';
 import MillerClock from './components/MillerClock';
 import EarthClock from './components/EarthClock';
