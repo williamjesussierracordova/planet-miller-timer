@@ -4,6 +4,7 @@ import MillerClock from './components/MillerClock';
 import EarthClock from './components/EarthClock';
 import MusicButton from './components/MusicButton';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -33,6 +34,7 @@ function App() {
         </div>
       </main>
       <MusicButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+      <Footer />
     </div>
   );
 }

@@ -115,7 +115,7 @@ body {
 
 .music-button-container {
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   left: 1rem;
 }
 
@@ -137,6 +137,16 @@ body.dark-theme {
   background-attachment: fixed;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: transparent;
+  color: white;
+  flex-direction: row;
+}
+
 @media (max-width: 600px) {
   .time-display {
     flex-direction: column;
@@ -156,5 +166,9 @@ body.dark-theme {
 
   .time-value, .time-label {
     font-size: 1em;
+  }
+
+  .footer{
+    flex-direction: column;
   }
 }
