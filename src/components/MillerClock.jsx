@@ -1,7 +1,9 @@
 import  { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const MillerClock = () => {
   const [millerTime, setMillerTime] = useState({});
+  const {t} = useTranslation();
 
   useEffect(() => {
     const updateMillerTime = () => {
@@ -28,14 +30,14 @@ const MillerClock = () => {
 
   return (
     <div id="miller-time" className="time-display">
-      <div className="time-unit"><span className="time-value">{millerTime.millerDays}</span> <span className="time-label">días</span></div>
-      <div className="time-unit"><span className="time-value">{millerTime.remainingHours}</span> <span className="time-label">horas</span></div>
-      <div className="time-unit"><span className="time-value">{millerTime.remainingMinutes}</span> <span className="time-label">minutos</span></div>
+      <div className="time-unit"><span className="time-value">{millerTime.millerDays}</span> <span className="time-label">{t('timer:days')}</span></div>
+      <div className="time-unit"><span className="time-value">{millerTime.remainingHours}</span> <span className="time-label">{t('timer:hours')}</span></div>
+      <div className="time-unit"><span className="time-value">{millerTime.remainingMinutes}</span> <span className="time-label">{t('timer:minutes')}</span></div>
       <div className="time-unit">
         <span className="time-value">
           {millerTime.remainingSeconds}.{millerTime.remainingMilliseconds?.toString().padStart(3, '0')}
         </span> 
-        <span className="time-label">segundos</span>
+        <span className="time-label"> {t('timer:seconds')}</span>
       </div>
     </div>
   );

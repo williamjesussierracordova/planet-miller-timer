@@ -63,6 +63,7 @@ body {
   background-color: transparent;
   color: white;
 }
+
 .time-display {
   display: flex;
   flex-wrap: wrap;
@@ -109,8 +110,31 @@ body {
   outline: none;
   background: none;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  margin: 0rem;
+  padding-inline: 1rem;
+}
+
+.buttonLanguage {
+  /* necesito que el borde no se note al presionarlo */
+  background-color: transparent;
+  outline: none;
+  background: none;
+  border: none;
+  border-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0rem;
+  padding-inline: 1rem;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+  padding: 0rem;
 }
 
 .music-button-container {

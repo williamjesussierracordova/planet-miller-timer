@@ -5,8 +5,11 @@ import EarthClock from './components/EarthClock';
 import MusicButton from './components/MusicButton';
 import './App.css';
 import Footer from './components/Footer';
+import './i18';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const {t} = useTranslation();
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -18,16 +21,16 @@ function App() {
     <div className="app-container">
       <Header isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
       <main className="content">
-        <h2>Tiempo desde el estreno de Interstellar (6 de noviembre de 2014)</h2>
+        <h2>{t('timer:tittle')} ({t('timer:dateRelease')})</h2>
         <div className="clock-container">
           {isDarkTheme ? (
             <>
-              <h3>Tiempo en la Tierra</h3>
+              <h3>{t('timer:subtittleEarth')}</h3>
               <EarthClock />
             </>
           ) : (
             <>
-              <h3>Tiempo en el Planeta Miller</h3>
+              <h3>{t('timer:subtittleMiller')}</h3>
               <MillerClock />
             </>
           )}

@@ -1,7 +1,9 @@
 import  { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const EarthClock = () => {
   const [earthTime, setEarthTime] = useState({});
+  const {t} = useTranslation();
 
   useEffect(() => {
     const updateEarthTime = () => {
@@ -29,25 +31,25 @@ const EarthClock = () => {
     <div id="earth-time" className="time-display">
     <div className="time-unit">
       <span className="time-value">{earthTime.years}</span> 
-      <span className="time-label"> años</span>
+      <span className="time-label"> {t('timer:years')}</span>
     </div>
     <div className="time-unit">
       <span className="time-value">{earthTime.days}</span> 
-      <span className="time-label"> días</span>
+      <span className="time-label"> {t('timer:days')}</span>
     </div>
     <div className="time-unit">
       <span className="time-value">{earthTime.hours}</span> 
-      <span className="time-label"> horas</span>
+      <span className="time-label"> {t('timer:hours')}</span>
     </div>
     <div className="time-unit">
       <span className="time-value">{earthTime.minutes}</span> 
-      <span className="time-label"> minutos</span>
+      <span className="time-label"> {t('timer:minutes')}</span>
     </div>
     <div className="time-unit">
       <span className="time-value">
         {earthTime.seconds}.{earthTime.milliseconds?.toString().padStart(3, '0')}
       </span> 
-      <span className="time-label"> segundos</span>
+      <span className="time-label"> {t('timer:seconds')}</span>
     </div>
   </div>
   );
