@@ -30,7 +30,7 @@ const About = () => {
                     </pre>
                 </div>
                 <div className="ab_image">
-                    <img src="public\assets\miller.webp" style={{width:'50%'}}></img>
+                    <img src="miller.webp" style={{width:'50%'}}></img>
                 </div>
                 <div className="ab_subtittle">
                     <h2>{t('about:subtittle1')}</h2>
@@ -49,7 +49,7 @@ const About = () => {
                     <pre>{t("about:s2p2")}</pre>
                 </div>
                 <div className="ab_image">
-                    <img src="public\assets\interstellar.webp" style={{width:'50%'}}></img>
+                    <img src="interstellar.webp" style={{width:'50%'}}></img>
                 </div>
             </div>
             <Footer />
