@@ -307,4 +307,8 @@ body.dark-theme {
   .footer{
     flex-direction: column;
   }
+
+  .footer-links {
+    padding-top: 2rem;
+  }
 }

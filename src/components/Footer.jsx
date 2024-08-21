@@ -7,7 +7,7 @@ const Footer = () => {
     const { t } = useTranslation();
     return (
         <div className="footer">
-            <footer>
+            <footer className="ft_name">
                 <p style={{margin:'0rem'}}>{t('footer:desarrollado')} <a href="https://william-sierra-cordova.netlify.app" target="_blank" rel="noreferrer">William</a></p>
             </footer>
             <div className="footer-links">
