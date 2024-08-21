@@ -1,6 +1,8 @@
 import Header from "./Header";
 import Footer from "./Footer"
 import { useTranslation } from 'react-i18next';
+import miller from "../../public/assets/miller.webp"
+import interstellar from "../../public/assets/interstellar.webp"
 
 const About = () => {
     const { t } = useTranslation();
@@ -30,7 +32,7 @@ const About = () => {
                     </pre>
                 </div>
                 <div className="ab_image">
-                    <img src="miller.webp" style={{width:'50%'}}></img>
+                    <img src={miller} style={{width:'50%'}}></img>
                 </div>
                 <div className="ab_subtittle">
                     <h2>{t('about:subtittle1')}</h2>
@@ -49,7 +51,7 @@ const About = () => {
                     <pre>{t("about:s2p2")}</pre>
                 </div>
                 <div className="ab_image">
-                    <img src="interstellar.webp" style={{width:'50%'}}></img>
+                    <img src={interstellar} style={{width:'50%'}}></img>
                 </div>
             </div>
             <Footer />
