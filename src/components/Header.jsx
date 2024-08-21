@@ -16,6 +16,8 @@ const Header = ({ isDarkTheme, setIsDarkTheme }) => {
     <header className="header">
       <h1>{t('header:planetaMiller')}</h1>
       <div className='headerButtons'>
+        <a href='/' style={{color:'white'}}>{t('header:home')}</a>
+        <a href='/About' style={{color:'white'}}>{t('header:about')}</a>
         <button onClick={toggleLanguage} className='buttonLanguage' style={{outline:'none'}}>
           {i18n.language === 'en' ? <Es/> : <Us/>}
         </button>
